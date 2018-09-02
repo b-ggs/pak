@@ -20,6 +20,12 @@ I'm also planning to include CentOS and [btw I use] Arch in future releases.
 
 In the mean time, [tell me what _you_ want][issues]!
 
+# Install
+
+```
+curl -o pak https://raw.githubusercontent.com/b-ggs/pak/master/pak ; chmod +x pak
+```
+
 # Usage
 
 * Print the current system's package manager
@@ -81,6 +87,10 @@ https://github.com/b-ggs/pak
 - Print the current system's package manager
 ...
 ```
+
+# Limitations
+
+This does not take into account differences in package names across the different package managers it supports. (e.g. `silversearcher-ag` on APT and `the_silver_searcher` on brew)
 
 [dotfiles]: https://github.com/b-ggs/dotfiles
 [termux]: https://termux.com/
