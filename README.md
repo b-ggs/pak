@@ -2,6 +2,8 @@
 
 a package manager detector
 
+<img src="https://i.imgur.com/UV9j0Zo.png" height="250px"> <img src="https://i.imgur.com/Tk5SAcL.png" height="250px">
+
 # Why?
 
 I wanted my [dotfiles][dotfiles] to have an install script that supported all the platforms I actively use (brew via macOS, APT on Ubuntu, Debian, and [Termux][termux] on Android).
@@ -9,6 +11,7 @@ I wanted my [dotfiles][dotfiles] to have an install script that supported all th
 So... literally because I'm lazy.
 
 And I wanted a DRY(-er?) install script I guess.
+
 
 # Supported Package Managers
 
