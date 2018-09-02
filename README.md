@@ -1,6 +1,6 @@
 # pak ![0.0.1](https://img.shields.io/badge/version-0.0.1-green.svg)
 
-a package manager detector
+a package manager detector and adapter
 
 <img src="https://i.imgur.com/UV9j0Zo.png" height="250px"> <img src="https://i.imgur.com/Tk5SAcL.png" height="250px">
 
@@ -83,7 +83,7 @@ Processing triggers for man-db (2.8.3-2) ...
 $ pak --help
 pak 0.0.1
 
-a package manager detector
+a package manager detector and adapter
 
 https://github.com/b-ggs/pak
 
