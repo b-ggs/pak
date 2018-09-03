@@ -4,7 +4,7 @@ setup() {
   PAK=$BATS_TEST_DIRNAME/../pak
 
   # Create fake brew
-  echo 'echo "fake $@"' > $BATS_TMPDIR/brew
+  echo 'echo "fake $0 $@"' > $BATS_TMPDIR/brew
   chmod +x $BATS_TMPDIR/brew
 }
 
@@ -29,7 +29,7 @@ teardown() {
 
   [ "${lines[0]}" = "[pak] Attempting to install 'zsh' via 'brew'..." ]
   [ "${lines[1]}" = "[brew]" ]
-  [ "${lines[2]}" = "fake install zsh" ]
+  [ "${lines[2]}" = "fake $BATS_TMPDIR/brew install zsh" ]
 }
 
 @test "'pak install zsh vim' invokes 'brew install zsh vim'" {
@@ -37,7 +37,7 @@ teardown() {
 
   [ "${lines[0]}" = "[pak] Attempting to install 'zsh vim' via 'brew'..." ]
   [ "${lines[1]}" = "[brew]" ]
-  [ "${lines[2]}" = "fake install zsh vim" ]
+  [ "${lines[2]}" = "fake $BATS_TMPDIR/brew install zsh vim" ]
 }
 
 # vi:syntax=sh
