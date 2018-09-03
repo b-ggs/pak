@@ -1,0 +1,30 @@
+script:
+  -
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      bats test/pak_brew.bats;
+    fi
+  -
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      bats test/pak_apt.bats;
+    fi
+
+matrix:
+    include:
+        - os: linux
+          dist: trusty
+          sudo: required
+          language: minimal
+        - os: osx
+          language: minimal
+
+before_install:
+  -
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install bats;
+    fi
+  -
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      sudo add-apt-repository ppa:duggan/bats --yes;
+      sudo apt-get update -qq;
+      sudo apt-get install -qq bats;
+    fi

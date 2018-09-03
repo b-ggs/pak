@@ -1,4 +1,4 @@
-# pak ![0.0.1](https://img.shields.io/badge/version-0.0.1-green.svg)
+# pak ![0.0.1](https://img.shields.io/badge/version-0.0.1-green.svg) ![Travis CI](https://api.travis-ci.org/b-ggs/pak.svg?branch=master)
 
 a package manager detector and adapter
 
